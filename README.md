@@ -4,6 +4,8 @@ Attempt at aligning two sequences using reinforcement learning. Please feel free
 the sequence alignment program. You can even develop your own novel solution to the enviroment.
 
 ## What is alignment?
+![alt text](https://www.mesquiteproject.org/files/multiSplitBefore.gif "Sequence Alignment")
+
 
 To align two sequences means to insert dashes at specific indices,
 shifting the overall sequence, to ensure that the two sequences match the most 
