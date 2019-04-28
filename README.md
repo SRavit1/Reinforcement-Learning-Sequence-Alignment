@@ -3,7 +3,7 @@
 Attempt at aligning two sequences using reinforcement learning. Please feel free to try out or tweak
 the sequence alignment program. You can even develop your own novel solution to the enviroment.
 
-##What is alignment?
+## What is alignment?
 
 To align two sequences means to insert dashes at specific indices,
 shifting the overall sequence, to ensure that the two sequences match the most 
@@ -18,16 +18,16 @@ researchers may want to determine the evolutionary relatedness of two organisms.
 Another application is in next generation sequencing, where researchers 
 want to determine overlapping sequences.
 
-##Overview
+## Overview
 
 This project takes a reinforcement learning approach to aligning two sequences.
 An environment is created, to provide new sequences to the user.
 The style of the environment mimics (and was inspired by) 
 that of OpenAI gyms (http://gym.openai.com/envs/).
 
-##Environment
+## Environment
 
-###Representation
+### Representation
 Following is the representation of elements in the sequence
 
 *   -1 - Dash (-)
@@ -37,21 +37,21 @@ Following is the representation of elements in the sequence
 *   4 - Guanine (G)
 
 
-###Actions
+### Actions
 
 *   0 - no dash
 *   1 - dash on seq1
 *   2 - dash on seq2
 
-###Rules
+### Rules
 
 The objective of the sequence alignment game is to get the highest score through making decisions. In this game, there are two sequences of nucleotides (like a four letter alphabet).The game ends when the index reaches the end of the last sequence, and at that point the final scores are tallied.
 
-###Score
+### Score
 
 Score is computed as follows: for each index in the sequence, 1 is added to the sequence if the two are matching, -1 is added if there is a mismatch, and -2 is added if there is a gap in one of the sequences
 
-###Variables
+### Variables
 
 *   index - represents the current index the game is currently at
 *   done - represents whether or not the game is over
@@ -59,7 +59,7 @@ Score is computed as follows: for each index in the sequence, 1 is added to the 
 *   seq2 - another nucleotide sequence to be aligned
 *   observation - 1x3 array (index, seq1, seq2)
 
-###Methods
+### Methods
 
 *   reset - returns a fresh new game, resetting the index and making new sequences
 *   step - given an action to take, returns observation, reward, and whether game is done
@@ -124,4 +124,3 @@ before and after taking the action. The calculation of the score is commonly use
 better alternatives to calculating reward, which is currently very short-term.
 * Model architecture - Perhaps a different model architecture, such as one involving Recurrent Neural Networks (RNN) would
 better serve the purposes of this solution.
-
